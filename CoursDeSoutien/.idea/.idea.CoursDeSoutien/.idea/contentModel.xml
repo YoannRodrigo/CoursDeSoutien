@@ -13,10 +13,17 @@
             </e>
             <e p="Readme_Please.txt" t="Include" />
           </e>
+          <e p="AurynSky" t="Include">
+            <e p="Rockets Missiles and Bombs" t="Include">
+              <e p="READ ME.txt" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="PlayerController.cs" t="Include" />
+          <e p="RocketController.cs" t="Include" />
           <e p="ThirdPersonCamera.cs" t="Include" />
+          <e p="TurretControler.cs" t="Include" />
         </e>
       </e>
       <e p="CoursDeSoutien.sln" t="IncludeFlat" />
