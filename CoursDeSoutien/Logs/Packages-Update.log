@@ -49,3 +49,11 @@ Update Mode: mergeDefaultDependencies
 
 The following packages were added:
   com.unity.postprocessing@2.2.1
+
+=== Wed Dec  4 16:45:48 2019
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.package-manager-ui from version 2.0.7 to 2.0.8
