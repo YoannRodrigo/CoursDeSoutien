@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
+    private const float SPEED = 3;
     private Rigidbody rb;
     private Animator animator;
     
@@ -18,8 +19,22 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        //Faire bouger le joueur
-        //Utiliser la bibliothèque Input
-        //Appliquer une force sur le rigibody
+        if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.Translate(SPEED * Time.deltaTime * transform.forward);
+        }
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.Translate(-SPEED * Time.deltaTime * transform.forward);
+        }
+        
+        if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Translate(-SPEED * Time.deltaTime * transform.right);
+        }
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Translate(SPEED * Time.deltaTime * transform.right);
+        }
     }
 }
