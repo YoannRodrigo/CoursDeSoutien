@@ -1741,7 +1741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7388ea4b2d826424d83cf4a12f38360d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1484250991}
+  target: {fileID: 542982515}
+  cameraFixPoint: {fileID: 1484250991}
   rotateSpeed: 5
 --- !u!1001 &537969734
 PrefabInstance:
@@ -1793,6 +1794,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 416390, guid: c76d2d3504ddb4847940a815cad04644,
     type: 3}
   m_PrefabInstance: {fileID: 537969734}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &542982515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5621477197736823129, guid: 1caf2d48932d29247b9ccd4150ab7bfe,
+    type: 3}
+  m_PrefabInstance: {fileID: 5621477198112632593}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &548625921
 PrefabInstance:
@@ -5659,6 +5666,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5621477196897054846, guid: 1caf2d48932d29247b9ccd4150ab7bfe,
+        type: 3}
+      propertyPath: m_Name
+      value: CameraFixPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 5621477197736334713, guid: 1caf2d48932d29247b9ccd4150ab7bfe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5742,11 +5754,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: turret_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7545251476427645061, guid: 1683ad68c68cb1049a1179bb586494f3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7545251476427357349, guid: 1683ad68c68cb1049a1179bb586494f3,
         type: 3}
