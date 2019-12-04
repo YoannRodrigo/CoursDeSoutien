@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour //Classe : objet. Va pouvoir commu
 {
     private Rigidbody rb;
     private Animator animator;
-
     private const float SPEED = 3f;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -19,29 +19,36 @@ public class PlayerController : MonoBehaviour //Classe : objet. Va pouvoir commu
     // Update is called once per frame
     private void Update()
     {
-            
-        if(Input.GetKey(KeyCode.Z))// On bouge vers l'avant
+        bool isRunning = false;
+        if (Input.GetKey(KeyCode.Z))// On bouge vers l'avant
         {
-            transform.Translate(SPEED*transform.forward*Time.deltaTime);
+            transform.Translate(SPEED*transform.forward*Time.deltaTime,0);
+            isRunning = true;
         }
         if (Input.GetKey(KeyCode.D))// On bouge à droite
         {
-            transform.Translate(SPEED * transform.right * Time.deltaTime);
+            transform.Translate(SPEED * transform.right * Time.deltaTime,0);
+            isRunning = true;
         }
         if (Input.GetKey(KeyCode.Q))// On bouge vers la gauche
         {
-            transform.Translate(SPEED * -transform.right * Time.deltaTime);
+            transform.Translate(SPEED * -transform.right* Time.deltaTime,0);
+            isRunning = true;
         }
         if (Input.GetKey(KeyCode.S))// On bouge vers l'arrière
         {
-            transform.Translate(SPEED * -transform.forward * Time.deltaTime);
+            transform.Translate(SPEED * -transform.forward * Time.deltaTime,0);
+            isRunning = true;
         }
         if (Input.GetKey(KeyCode.Space))// On bouge vers le haut
         {
-            transform.Translate(3* SPEED * transform.up * Time.deltaTime);
+            transform.Translate(3 * SPEED * transform.up * Time.deltaTime,0);
+            animator.SetBool("IsRunning", true);
         }
+
         //Faire bouger le joueur
         //Utiliser la bibliothèque Input
         //Appliquer une force sur le rigibody
+        animator.SetBool("IsRunning", isRunning);
     }
 }
