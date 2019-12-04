@@ -193,20 +193,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3.2592177
   m_Center: {x: 0.06174278, y: 0.42801794, z: 0.07556533}
---- !u!114 &878925841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7545251476427645061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29c4dea3d823d134ba9f0bd459c60c9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagPlayer: 
-  missilePrefab: {fileID: 0}
 --- !u!114 &878925843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,14 +215,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 100006, guid: 36215181e56dda44b8bb066f0715cfd9, type: 3}
-      propertyPath: m_Name
-      value: turret_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100006, guid: 36215181e56dda44b8bb066f0715cfd9, type: 3}
-      propertyPath: m_TagString
-      value: Turret
-      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 36215181e56dda44b8bb066f0715cfd9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.06
@@ -292,6 +270,14 @@ PrefabInstance:
     - target: {fileID: 400006, guid: 36215181e56dda44b8bb066f0715cfd9, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 36215181e56dda44b8bb066f0715cfd9, type: 3}
+      propertyPath: m_Name
+      value: turret_2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 36215181e56dda44b8bb066f0715cfd9, type: 3}
+      propertyPath: m_TagString
+      value: Turret
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36215181e56dda44b8bb066f0715cfd9, type: 3}

@@ -1741,7 +1741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7388ea4b2d826424d83cf4a12f38360d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1484250991}
+  target: {fileID: 874707840}
+  cameraFixPoint: {fileID: 1484250991}
   rotateSpeed: 5
 --- !u!1001 &537969734
 PrefabInstance:
@@ -2640,7 +2641,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86b59ab087fcefd44b4a2c9ef2ed6d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
 --- !u!1001 &881670596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5677,6 +5677,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5621477196897054846, guid: 1caf2d48932d29247b9ccd4150ab7bfe,
+        type: 3}
+      propertyPath: m_Name
+      value: CameraFixPoint
       objectReference: {fileID: 0}
     - target: {fileID: 5621477197736334713, guid: 1caf2d48932d29247b9ccd4150ab7bfe,
         type: 3}

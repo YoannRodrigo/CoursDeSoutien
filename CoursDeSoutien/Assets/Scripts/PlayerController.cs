@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
     private Animator animator;
-    private const float SPEED = 4;
+    private const float VITESSE = 4;
     
     private void Start()
     {
@@ -19,30 +19,33 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        bool isRunning = false; 
         //Faire bouger le joueur
         if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow))
         {
-            transform.Translate(SPEED * transform.forward * Time.deltaTime);
+            transform.Translate(VITESSE * transform.forward * Time.deltaTime, 0);
+            isRunning = true;
         }
 
         else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Translate(SPEED * -transform.forward * Time.deltaTime);
+            transform.Translate(VITESSE * -transform.forward * Time.deltaTime, 0);
         }
 
         if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(SPEED * -transform.right * Time.deltaTime);
+            transform.Translate(VITESSE * -transform.right * Time.deltaTime, 0);
         }
 
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(SPEED * transform.right * Time.deltaTime);
+            transform.Translate(VITESSE * transform.right * Time.deltaTime, 0);
         }
 
         if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Space))
         {
-            transform.Translate(SPEED * transform.up * Time.deltaTime);
+            transform.Translate(VITESSE * transform.up * Time.deltaTime, 0);
         }
+        animator.SetBool("IsRunning", isRunning);
     }
 }
