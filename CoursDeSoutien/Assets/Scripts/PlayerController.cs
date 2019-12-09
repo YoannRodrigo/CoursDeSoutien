@@ -50,5 +50,7 @@ public class PlayerController : MonoBehaviour //Classe : objet. Va pouvoir commu
         //Utiliser la bibliothèque Input
         //Appliquer une force sur le rigibody
         animator.SetBool("IsRunning", isRunning);
+
+        
     }
 }
