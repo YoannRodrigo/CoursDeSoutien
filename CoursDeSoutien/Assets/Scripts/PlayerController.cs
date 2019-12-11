@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
     private Animator animator;
+    public float speed = 0.5f;
+    public float jumpForce = 0.5f;
     
     private void Start()
     {
@@ -18,8 +20,29 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        //Faire bouger le joueur
-        //Utiliser la bibliothèque Input
-        //Appliquer une force sur le rigibody
+        if(Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.Translate(speed * Time.deltaTime * transform.forward, 0);
+        }
+
+        if(Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Translate(speed * Time.deltaTime * - transform.right, 0);
+        }
+
+        if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Translate(speed * Time.deltaTime * transform.right, 0);
+        }
+
+        if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.Translate(speed * Time.deltaTime * - transform.forward, 0);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
     }
 }
